@@ -46,7 +46,7 @@
                     <div class="card-body">
                         <div class="mx-3">
                             <h4>Chalmers University of Technology</h4>
-                            <div><strong>August 2021 - January 2020</strong></div>
+                            <div><strong>August 2021 - January 2022</strong></div>
                             <p>Study abroad semester focused on Machine Learning and Neural Networks</p>
                         </div>
                     </div>
@@ -59,13 +59,14 @@
 
         <div class="row">
             <h3 class="mb-3">Work Experience</h3>
+
             <div class="col">
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> Data Analyst at Cemex</h4>
-                            <div><strong>March 2022 - Current</strong></div>
-                            <p>Work with the company databases to create dashboards, visualizations and python analysis.</p>
+                            <h4> DANU - OVERALL</h4>
+                            <div><strong>Febraury 2024 - Current</strong></div>
+                            <p>I work as a Data Engineer, but since its a small company I took multiple roles when developing projects. The projects i took where either solo or a pair of a Data Engineer and a Data Analyst. I use the 3 major Cloud Service Providers to build analytics projects, working as a Data Engineer to build the pipeline and the cloud infrastructure, Data Analyst to build the datawarehouse and the visualizations, Project Manager to lead my own project or the data analyst coworker, Businees Developer to have conversations with clients to understand requirments, selling the projects or delivering results. Here i also worked as a professor giving lectures at Tecnologico de Monterrey by assigning them fake projects to students from Digital Transformation Carreer. </p>
                         </div>
                     </div>
                 </div>
@@ -75,21 +76,68 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> Data Analyst at Tecstore</h4>
-                            <div><strong>Febraury 2021 - July 2021</strong></div>
-                            <p>Analyze how the sales of the Store behave after changing from a physical store to a digital. This using Power BI and Python</p>
+                            <h4> DANU - Wine Retail Company</h4>
+                            <div><strong>July 2024 - Current</strong></div>
+                            <p>Build the AWS Cloud Infrastructure for the data analytics project. They wanted to analyze the data from Sales, Finance, Marketing department.</p>
+                            <ul>
+                                <li><strong>Analytics Pipeline:</strong> Takes data from different sources and store it in S3, then with Glue send it to raw_data database in Redshift. Its then processes in DBT to create the Data Models in order to create visualizations in Quicksight</li>
+                                <li><strong>Machine Learing Pipeline:</strong> Extract data from the datawarehouse in Redshift to feed Sagemaker Notebooks and ML Personlize Models to give more insights to the Visualizations</li>
+                                <li><strong>Automation Pipeline:</strong> With the output of Personalize Recommendation Models we send emails to clients with Simple Email Service</li>
+                                <li><strong>Pipeline Optimization: </strong> Develop optimization in the Analytics Pipeline reducing by 50% the datawarehouse building process, and by 90% de rawdata process</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="mx-3">
+                            <h4>DANU - Furniture Retail Company #1</h4>
+                            <div><strong>April 2024 - August 2024</strong></div>
+                            <p>Develop a full Analytics project in Google Cloud, to analyze the Sales, Inventory and Finances of the Company. The pipeline starts by extracting the code from SQL Server On Prem via a python code, and send it to a BigQuery database. Then with DBT we build the datawarehouse and send it back to Big Query so we can feed Power BI Visualizations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="mx-3">
+                            <h4> DANU - Furniture Retail Company #2</h4>
+                            <div><strong>May 2024 - September 2024</strong></div>
+                            <p>Develop a full analytics project in Google Cloud, to analyze the Sales and Inventory of the Company. The client have the information in Google Sheets and Shopify. We use a direct connection to send data from Google Sheets to BigQuery and a Python API Call to extract data from Shopify. Then use DBT to buid the datawarehouse to create insightful visualizations in Looker.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="mx-3">
+                            <h4> DANU - Funeral Services Company</h4>
+                            <div><strong>May 2024 - September 2024</strong></div>
+                            <p>Extract data from Oracle Server with Data Factory to populate the Data Lake, then use Databricks and Synapase Analytics to build a medallion architecture and the Datawarehouse in order to visualize data in Power BI</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            
             <div class="col">
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> Data Analyst at Tecstore</h4>
-                            <div><strong>Febraury 2021 - July 2021</strong></div>
-                            <p>Analyze how the sales of the Store behave after changing from a physical store to a digital. This using Power BI and Python</p>
+                            <h4> DANU - Vending Machines Client</h4>
+                            <div><strong>Febraury 2024 - April 2024</strong></div>
+                            <p>Build an ERP Like platform so the client can upload their data in Retool. Then connect to Google Cloud and DBT to build the Datawarehouse and feed Looker Dashboards to analyze the Sales, and Inventory Management of the Machines</p>
                         </div>
                     </div>
                 </div>
@@ -101,9 +149,14 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> Data Analyst at Tecstore</h4>
-                            <div><strong>Febraury 2021 - July 2021</strong></div>
-                            <p>Analyze how the sales of the Store behave after changing from a physical store to a digital. This using Power BI and Python</p>
+                            <h4> Doctoralia</h4>
+                            <div><strong>Febraury 2023 - Febraury 2024</strong></div>
+                            <p>Work as Data Support for the company. I have 2 main jobs</p>
+                            <ul>
+                                <li>Attend JIRA tickets regarding Dashboard Creation, SQL Analysis or Pipeline Automation. </li>
+                                <li>Doing audits inside the company to detect malpractices by the Customer Success Teams, and in case of mal practices do retrains to help them have a better use of the platforms</li>
+                            </ul>
+                            <p> I got the opportunity with technologies like GCP, Looker, AWS, Hubspot and Salesforce</p>
                         </div>
                     </div>
                 </div>
@@ -113,9 +166,22 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> Data Analyst at Tecstore</h4>
-                            <div><strong>Febraury 2021 - July 2021</strong></div>
-                            <p>Analyze how the sales of the Store behave after changing from a physical store to a digital. This using Power BI and Python</p>
+                            <h4>CEMEX</h4>
+                            <div><strong>Febraury 2022 - December 2022</strong></div>
+                            <p>Help the Spend Area to rebuild dashboards from Tableau to Power BI. Having meetings with the stakeholders to understand their needs, and presenting them the new visualizations. Also I got to build my own models to feed this new dashboards in Snowflake, conecting to the Datalake in Azure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="mx-3">
+                            <h4>TECSTORE</h4>
+                            <div><strong>Febraury 2021 - June 2021</strong></div>
+                            <p>Freelance Project where i built a pipeline to extract data from excels and SQL Server, to feed Power BI dashboards in order to help the clothing and souvenir store, how Covid affect the company.</p>
                         </div>
                     </div>
                 </div>
@@ -125,9 +191,9 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> Data Analyst at Tecstore</h4>
-                            <div><strong>Febraury 2021 - July 2021</strong></div>
-                            <p>Analyze how the sales of the Store behave after changing from a physical store to a digital. This using Power BI and Python</p>
+                            <h4>OpenSer</h4>
+                            <div><strong>January 2020 - June 2020</strong></div>
+                            <p>Freelance Project for a Customer IT Support Company to analyze the data of ticket resolution. Build dashboards in Tableau, to analyze the different KPIs of the company and help them understand and visualize the metrics of their agents and their customers.</p>
                         </div>
                     </div>
                 </div>
@@ -142,7 +208,7 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <div class="mx-3">
-                            <h4> DE Tools</h4>
+                            <h4> Data Engineering Tools</h4>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">AWS</li>
                                 <li class="list-group-item">GCP</li>
@@ -150,6 +216,8 @@
                                 <li class="list-group-item">DBT</li>
                                 <li class="list-group-item">Airflow</li>
                                 <li class="list-group-item">Docker</li>
+                                <li class="list-group-item">Databricks</li>
+                                <li class="list-group-item">Git</li>
                             </ul>
                         </div>
                     </div>
