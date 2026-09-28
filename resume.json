@@ -1,0 +1,245 @@
+{
+  "basics": {
+    "name": "José Miguel Elizalde Moncayo",
+    "title": "Senior Data Engineer",
+    "summary": "Computer Science Engineer focused on data engineering, cloud data platforms and analytics.",
+    "email": "miguel.elizaldem@outlook.com",
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/jose-miguel-elizalde-moncayo/" },
+      { "label": "GitHub", "url": "https://github.com/jmiguelem" }
+    ]
+  },
+
+  "tags": {
+    "GCP": { "group": "Cloud" },
+    "AWS": { "group": "Cloud" },
+    "Azure": { "group": "Cloud" },
+
+    "BigQuery": { "group": "Cloud services", "parent": "GCP" },
+    "Looker": { "group": "BI", "parent": "GCP" },
+    "Redshift": { "group": "Cloud services", "parent": "AWS" },
+    "S3": { "group": "Cloud services", "parent": "AWS" },
+    "Glue": { "group": "Cloud services", "parent": "AWS" },
+    "Lambda": { "group": "Cloud services", "parent": "AWS" },
+    "Step Functions": { "group": "Cloud services", "parent": "AWS" },
+    "EventBridge": { "group": "Cloud services", "parent": "AWS" },
+    "SES": { "group": "Cloud services", "parent": "AWS" },
+    "End User Messaging": { "group": "Cloud services", "parent": "AWS" },
+    "Pinpoint": { "group": "Cloud services", "parent": "AWS" },
+    "SageMaker": { "group": "Cloud services", "parent": "AWS" },
+    "Personalize": { "group": "Cloud services", "parent": "AWS" },
+    "QuickSight": { "group": "BI", "parent": "AWS" },
+    "Azure Data Lake": { "group": "Cloud services", "parent": "Azure" },
+
+    "DBT": { "group": "Data engineering" },
+    "Airflow": { "group": "Data engineering" },
+    "Databricks": { "group": "Data engineering" },
+    "Snowflake": { "group": "Data engineering" },
+    "Spark": { "group": "Data engineering" },
+    "PySpark": { "group": "Data engineering", "parent": "Spark" },
+    "SQL": { "group": "Data engineering" },
+    "SQL Server": { "group": "Data engineering", "parent": "SQL" },
+    "MySQL": { "group": "Data engineering", "parent": "SQL" },
+    "Terraform": { "group": "Data engineering" },
+    "Docker": { "group": "Data engineering" },
+
+    "Power BI": { "group": "BI" },
+    "Tableau": { "group": "BI" },
+    "Retool": { "group": "BI" },
+    "Excel": { "group": "BI" },
+
+    "Python": { "group": "Languages and frameworks" },
+    "TypeScript": { "group": "Languages and frameworks" },
+    "NestJS": { "group": "Languages and frameworks", "parent": "TypeScript" },
+    "JavaScript": { "group": "Languages and frameworks" },
+    "R": { "group": "Languages and frameworks" },
+    "C++": { "group": "Languages and frameworks" },
+    "PHP": { "group": "Languages and frameworks" },
+
+    "Git": { "group": "Dev tools" },
+    "GitHub Copilot": { "group": "Dev tools" },
+    "Jira": { "group": "Dev tools" },
+
+    "Salesforce": { "group": "Business tools" },
+    "HubSpot": { "group": "Business tools" },
+    "Shopify": { "group": "Business tools" },
+    "Google Sheets": { "group": "Business tools" },
+
+    "ETL": { "group": "Topics" },
+    "Data Warehousing": { "group": "Topics" },
+    "Data Modeling": { "group": "Topics" },
+    "Machine Learning": { "group": "Topics" },
+    "Advanced Analytics": { "group": "Topics" },
+    "Backend": { "group": "Topics" },
+    "Platform Engineering": { "group": "Topics" },
+    "Solution Architecture": { "group": "Topics" },
+    "Stakeholder Management": { "group": "Topics" }
+  },
+
+  "work": [
+    {
+      "company": "Slalom",
+      "role": "Senior Data Engineer",
+      "start": "2025-03",
+      "end": null,
+      "tags": [],
+      "projects": [
+        {
+          "name": "Utility client — Weather Alert application",
+          "start": "2025-03",
+          "end": null,
+          "summary": "Map-based alerting app that ingests planned, unplanned and potential power outages every 5 minutes, runs calculations and raises alerts shown on the map.",
+          "bullets": [
+            "Cut the main ingestion pipeline's average runtime from about 6 minutes to 50 seconds (roughly 86% faster).",
+            "Led the migration off Amazon Pinpoint to Amazon SES and AWS End User Messaging, driven by EventBridge and Lambda: researched replacement services, designed the target architecture, broke the work into stories and led implementation with the other developers.",
+            "Consolidated the application from two separate AWS accounts into one.",
+            "Took on backend and platform engineering beyond the data role: API work in TypeScript with NestJS, and infrastructure as code with Terraform.",
+            "Own ongoing maintenance and bug fixing across the ingestion, processing and alerting pipeline."
+          ],
+          "tags": ["AWS", "Glue", "Lambda", "Step Functions", "EventBridge", "SES", "End User Messaging", "Pinpoint", "MySQL", "Python", "PySpark", "TypeScript", "NestJS", "Terraform", "GitHub Copilot", "ETL", "Backend", "Platform Engineering", "Solution Architecture"]
+        }
+      ]
+    },
+    {
+      "company": "Danu Consulting Group",
+      "role": "Data Engineer",
+      "start": "2024-02",
+      "end": "2025-08",
+      "note": "Half-time from Mar 2025",
+      "summary": "Built end-to-end analytics projects for clients across AWS, Azure and Google Cloud, often solo or with one data analyst: infrastructure, pipelines, data warehouses and dashboards.",
+      "bullets": [
+        "Led projects independently or with a small team, from scoping to delivery.",
+        "Worked directly with clients as a business developer: gathered needs, presented solutions and delivered outcomes."
+      ],
+      "tags": ["AWS", "GCP", "Azure", "DBT", "ETL", "Data Warehousing", "Stakeholder Management"],
+      "projects": [
+        {
+          "name": "Wine retail company",
+          "start": "2024-07",
+          "end": "2025-08",
+          "summary": "Built and deployed the AWS infrastructure for an analytics platform covering Sales, Finance and Marketing.",
+          "bullets": [
+            "Analytics pipeline: ingested multiple sources into S3, loaded them into Redshift with Glue, modeled them with DBT and reported in QuickSight.",
+            "Machine learning pipeline: fed Redshift data into SageMaker notebooks and Amazon Personalize recommendation models.",
+            "Automation: sent personalized recommendation emails to customers with Amazon SES based on Personalize output.",
+            "Cut data warehouse build time by 50% and raw data processing time by 90%."
+          ],
+          "tags": ["AWS", "S3", "Glue", "Redshift", "DBT", "QuickSight", "SageMaker", "Personalize", "SES", "Machine Learning", "Data Warehousing", "ETL"]
+        },
+        {
+          "name": "Furniture retail company #2",
+          "start": "2024-05",
+          "end": "2024-09",
+          "summary": "Led a Google Cloud analytics solution for Sales and Inventory.",
+          "bullets": [
+            "Pipeline: connected Google Sheets to BigQuery and pulled Shopify data through its API with Python.",
+            "Data warehouse: modeled the warehouse in BigQuery with DBT.",
+            "Visualization: built Looker dashboards for the client."
+          ],
+          "tags": ["GCP", "BigQuery", "DBT", "Python", "Shopify", "Google Sheets", "Looker", "Data Warehousing", "ETL"]
+        },
+        {
+          "name": "Furniture retail company #1",
+          "start": "2024-04",
+          "end": "2024-08",
+          "summary": "Built a Google Cloud analytics solution for Sales, Inventory and Finance data.",
+          "bullets": [
+            "Pipeline: extracted data from an on-premises SQL Server with Python into BigQuery.",
+            "Data warehouse: modeled the warehouse in BigQuery with DBT.",
+            "Visualization: connected Power BI to BigQuery for near-real-time reporting."
+          ],
+          "tags": ["GCP", "BigQuery", "DBT", "Python", "SQL Server", "Power BI", "Data Warehousing", "ETL"]
+        },
+        {
+          "name": "Vending machine operator",
+          "start": "2024-02",
+          "end": "2024-04",
+          "summary": "Built an ERP-like platform for uploading, processing and visualizing Sales and Inventory data.",
+          "bullets": [
+            "Data entry: let the client upload data directly through a Retool interface.",
+            "Pipeline: connected Retool to Google Cloud and built the warehouse with DBT.",
+            "Visualization: Looker dashboards for sales and inventory per machine."
+          ],
+          "tags": ["GCP", "Retool", "DBT", "Looker", "Data Warehousing"]
+        }
+      ]
+    },
+    {
+      "company": "Doctoralia",
+      "role": "Customer Success Operations",
+      "start": "2023-02",
+      "end": "2024-02",
+      "summary": "Data support for the Customer Success organization.",
+      "bullets": [
+        "Resolved Jira requests for dashboards, SQL analysis and pipeline automation; designed and optimized Looker dashboards.",
+        "Ran internal audits to find malpractice in Customer Success teams and retrained them on the platform."
+      ],
+      "tags": ["GCP", "Looker", "SQL", "AWS", "HubSpot", "Salesforce", "Jira"]
+    },
+    {
+      "company": "Cemex",
+      "role": "Data Analyst",
+      "start": "2022-02",
+      "end": "2022-12",
+      "summary": "Led the migration of the Spend area's dashboards from Tableau to Power BI.",
+      "bullets": [
+        "Met with stakeholders to gather requirements and present the new Power BI reports.",
+        "Built data models in Snowflake on top of Azure Data Lake to feed the new dashboards."
+      ],
+      "tags": ["Power BI", "Tableau", "Snowflake", "Azure", "Azure Data Lake", "Data Modeling", "Stakeholder Management"]
+    },
+    {
+      "company": "TecStore",
+      "role": "Data Analyst",
+      "start": "2021-02",
+      "end": "2021-06",
+      "summary": "Analyzed the impact of COVID-19 on a clothing and souvenir store and supported its move to online retail.",
+      "bullets": [
+        "Built a pipeline from Excel files and SQL Server into an SQL star-schema warehouse.",
+        "Created Power BI dashboards on business performance during the pandemic."
+      ],
+      "tags": ["SQL Server", "Excel", "Power BI", "Data Warehousing", "ETL"]
+    },
+    {
+      "company": "OpenSer",
+      "role": "Data Analyst",
+      "start": "2020-01",
+      "end": "2020-06",
+      "summary": "Analyzed ticket-resolution and agent-performance metrics for an IT support company.",
+      "bullets": [
+        "Built interactive Tableau dashboards for ticket-resolution KPIs."
+      ],
+      "tags": ["Tableau"]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Tecnológico de Monterrey",
+      "degree": "Bachelor of Science in Computer Science",
+      "detail": "Minor in Advanced Analytics",
+      "start": "2017-08",
+      "end": "2022-12",
+      "tags": ["Advanced Analytics"]
+    },
+    {
+      "institution": "Chalmers University of Technology",
+      "degree": "Study abroad semester",
+      "detail": "Machine Learning and Neural Networks courses",
+      "start": "2021-08",
+      "end": "2022-01",
+      "tags": ["Machine Learning"]
+    }
+  ],
+
+  "learning": [],
+
+  "skills": {
+    "Cloud": ["AWS", "GCP", "Azure"],
+    "Data engineering": ["SQL", "DBT", "Spark", "Airflow", "Databricks", "Snowflake", "Terraform", "Docker"],
+    "BI": ["Power BI", "Tableau", "Looker", "QuickSight"],
+    "Languages and frameworks": ["Python", "TypeScript", "NestJS", "JavaScript", "R", "C++", "PHP"],
+    "Dev tools": ["Git", "GitHub Copilot", "Jira"],
+    "Business tools": ["Salesforce", "HubSpot"]
+  }
+}

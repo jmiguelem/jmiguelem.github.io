@@ -1,302 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Miguel Elizalde's Portfolio</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"  crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>José Miguel Elizalde Moncayo · Senior Data Engineer</title>
+  <meta name="description" content="Resume of José Miguel Elizalde Moncayo, Senior Data Engineer: work, education, learning and skills, filterable by technology.">
+  <link rel="canonical" href="https://jmiguelem.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151615" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://jmiguelem.github.io/">
+  <meta property="og:title" content="José Miguel Elizalde Moncayo · Senior Data Engineer">
+  <meta property="og:description" content="Senior Data Engineer working across AWS, GCP and Azure. Filter my work, education and skills by technology.">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-    <div id="content-to-pdf">
+  <a class="skip-link" href="#work">Skip to resume</a>
+  <main class="page">
+    <header class="masthead">
+      <h1 id="name">José Miguel Elizalde Moncayo</h1>
+      <p class="title" id="title"></p>
+      <p class="summary" id="summary"></p>
+      <nav class="contact" id="contact" aria-label="Contact"></nav>
+    </header>
 
-        <!--Header-->
-        <div class="container-md text text-center">
-            <h1>José Miguel Elizalde Moncayo</h1>
-            <a href="mailto:miguel.elizaldem@outlook.com" type="button" class="button">
-                miguel.elizaldem@outlook.com
-            </a>
-            <p class="lead">Computer Science Engineer focused on Software Engineering and Data Engineering.</p>
+    <div id="filters-anchor"></div>
+    <div class="filters" id="filters" role="region" aria-label="Filter by technology" hidden>
+      <span class="filters-label" id="filters-label">Filter</span>
+      <div class="filters-body">
+        <div class="filter-row">
+          <div class="filter-chips" id="filter-chips" aria-labelledby="filters-label"></div>
+          <div class="filter-actions">
+            <button type="button" class="linklike" id="filter-more" aria-expanded="false" aria-controls="filter-all">All tags</button>
+            <button type="button" class="linklike" id="filter-clear" hidden>Clear</button>
+          </div>
         </div>
-
-        <!--Download Button
-        <div class="container">
-            <nav>
-                <ul class="nav nav-pills justify-content-center">
-                    <li class="nav-item">
-                        <button class="button" id="download-btn"> Download Me! </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>-->
-
-        <!--Education-->
-        
-        <div class="container mt-5">
-            <div class="row">
-                <h3 class="mb-3">Education</h3>
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Tecnológico de Monterrey</h4>
-                                <div class="title">August 2017 - December 2022</div>
-                                <p>Bachelor of Science in Computer Science</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Chalmers University of Technology</h4>
-                                <div class="title">August 2021 - January 2022</div>
-                                <p>Study abroad semester focused on Machine Learning and Neural Networks</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <!--Experience-->
-        <div class="container mt-5">
-            <div class="row">
-                <h3 class="mb-3">Professional Experience</h3>
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Danu</h4>
-                                <div class="title">February 2024 - Current</div>
-                                <p>As a Data Engineer in a small company, I managed multiple roles, often working solo or with a Data Analyst. I developed end-to-end analytics projects across AWS, Azure, and Google Cloud, handling infrastructure design, data pipelines, and analysis. I also took on Data Analyst tasks, building data warehouses and creating visualizations. In project management, I led projects independently or collaboratively, and as a Business Developer, I engaged clients to understand needs, present solutions, and deliver outcomes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Danu - Wine Retail Company</h4>
-                                <div class="title">July 2024 - Current</div>
-                                <p>Built and deployed the AWS cloud infrastructure for a comprehensive data analytics project aimed at analyzing data from the Sales, Finance, and Marketing departments.</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>Analytics Pipeline:</strong> Integrated data from multiple sources, stored it in Amazon S3, and used AWS Glue to transfer the data into the raw_data database in Amazon Redshift. Data models were created using DBT (Data Build Tool), enabling the generation of visualizations in Amazon QuickSight.</li>
-                                    <li class="list-group-item"><strong>Machine Learing Pipeline:</strong> Extracted data from the Redshift data warehouse to feed Amazon SageMaker notebooks and Machine Learning models (Amazon Personalize), providing advanced insights for improved visualizations.</li>
-                                    <li class="list-group-item"><strong>Automation Pipeline:</strong> Leveraged Amazon SES (Simple Email Service) to send personalized email recommendations to clients based on the outputs of the Amazon Personalize recommendation models.</li>
-                                    <li class="list-group-item"><strong>Pipeline Optimization: </strong> Implemented optimizations in the analytics pipeline, reducing data warehouse build time by 50% and raw data processing time by 90%.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Danu - Furniture Retail Company #1</h4>
-                                <div class="title">April 2024 - August 2024</div>
-                                <p>Developed a comprehensive analytics solution to analyze Sales, Inventory, and Financial data for the company using Google Cloud services. </p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>Data Pipeline:</strong> Extracted data from an on-premises SQL Server using Python, transferring it to Google BigQuery for centralized storage.</li>
-                                    <li class="list-group-item"><strong>Data Warehouse:</strong> Utilized DBT to model and build the data warehouse in BigQuery, ensuring efficient data organization and processing.</li>
-                                    <li class="list-group-item"><strong>Visualization:</strong> Integrated Power BI with BigQuery to generate real-time visualizations and business insights for stakeholders.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Danu - Furniture Retail Company #2</h4>
-                                <div class="title">May 2024 - September 2024</div>
-                                <p>Led the development of a full-scale analytics solution to analyze the company's Sales and Inventory data, leveraging Google Cloud for seamless data integration and visualization. </p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>Data Pipeline:</strong> Established a direct connection to Google Sheets, sending data to BigQuery, and used a Python API to extract data from Shopify.</li>
-                                    <li class="list-group-item"><strong>Data Warehouse:</strong> Employed DBT to construct a robust data warehouse in BigQuery, streamlining data organization and management.</li>
-                                    <li class="list-group-item"><strong>Visualization:</strong> Created insightful, data-driven visualizations in Looker, providing the client with actionable insights.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Danu - Vending Machines Client</h4>
-                                <div class="title">February 2024 - April 2024</div>
-                                <p>Developed an ERP-like platform to streamline data upload, processing, and visualization for Sales and Inventory Management.</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>Data Upload & Integration:</strong> Enabled clients to upload data directly into Retool, a user-friendly interface for data entry and management.</li>
-                                    <li class="list-group-item"><strong>Data Pipeline:</strong> Connected Retool to Google Cloud, leveraging DBT (Data Build Tool) to build and organize the data warehouse for efficient data processing.</li>
-                                    <li class="list-group-item"><strong>Visualization:</strong> Integrated Looker dashboards to provide real-time analysis and insights into Sales and Inventory Management of the client's machines.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Doctoralia</h4>
-                                <div class="title">February 2023 - February 2024</div>
-                                <p>Provided comprehensive data support for the company, focusing on two key responsibilities:</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>JIRA Ticket Management:</strong> JIRA tickets related to dashboard creation, SQL analysis, and pipeline automation, ensuring efficient resolution of data requests.</li>
-                                    <li class="list-group-item"><strong>Internal Audits & Training:</strong> Conducted internal audits to identify malpractices within the Customer Success Teams, and provided retraining to improve platform usage and compliance.</li>
-                                </ul>
-
-                                <p>Worked with technologies including Google Cloud Platform (GCP), Looker, AWS, HubSpot, and Salesforce.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Cemex</h4>
-                                <div class="title">February 2022 - December 2022</div>
-                                <p>Led the migration of dashboards from Tableau to Power BI for the Spend Area, ensuring alignment with stakeholder requirements.</p>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><strong>Stakeholder Engagement:</strong> Conducted meetings with stakeholders to understand their specific needs and presented updated visualizations in Power BI.</li>
-                                    <li class="list-group-item"><strong>Data Modeling:</strong> Developed custom data models in Snowflake, connecting to the Azure Data Lake to efficiently feed the new Power BI dashboards.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Tecstore</h4>
-                                <div class="title">February 2021 - June 2021</div>
-                                <p>Developed a data pipeline to support a clothing and souvenir store in analyzing the impact of COVID-19 on their business.</p><br>
-                                <p>Built a pipeline to extract data from Excel files and SQL Server databases, and Integrated the data into Power BI to create dashboards that provided insights into the business's performance during the pandemic.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Openser</h4>
-                                <div class="title">January 2020 - June 2020</div>
-                                <p>Developed data analytics solutions to analyze ticket resolution metrics for a customer IT support company. Created interactive dashboards in Tableau to visualize key performance indicators (KPIs) related to ticket resolution.</p><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-
-
-        <!--Skills-->
-        <div class="container mt-5">
-            <div class="row">
-                <h3 class="mb-3">Skills</h3>
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>DE Tools</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">AWS</li>
-                                    <li class="list-group-item">GCP</li>
-                                    <li class="list-group-item">Azure</li>
-                                    <li class="list-group-item">DBT</li>
-                                    <li class="list-group-item">Airflow</li>
-                                    <li class="list-group-item">Docker</li>
-                                    <li class="list-group-item">Databricks</li>
-                                    <li class="list-group-item">Git</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>BI Tools</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Power BI</li>
-                                    <li class="list-group-item">Tableau</li>
-                                    <li class="list-group-item">Looker</li>
-                                    <li class="list-group-item">Quicksight</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="custom-card custom-card-hover mb-3">
-                        <div class="card-body">
-                            <div class="mx-3">
-                                <h4>Programming Languages</h4>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Python</li>
-                                    <li class="list-group-item">Spark</li>
-                                    <li class="list-group-item">C++</li>
-                                    <li class="list-group-item">R</li>
-                                    <li class="list-group-item">Javascript</li>
-                                    <li class="list-group-item">PHP</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-        <!--Projects-->
-
-
-
-        <!--Certifications-->
-
-
+        <div class="filter-all" id="filter-all" hidden></div>
+        <p class="filter-status" id="filter-status" aria-live="polite"></p>
+      </div>
     </div>
 
-    <!-- Include html2pdf library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-    
-    <!-- Link to your custom JS file -->
-    <script src="download_resume.js"></script>
+    <section class="section" id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Work</h2>
+      <div class="section-body">
+        <div id="work-list"></div>
+        <p class="empty" id="work-empty" hidden></p>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-h">
+      <h2 id="education-h">Education</h2>
+      <div class="section-body">
+        <div id="education-list"></div>
+        <p class="empty" id="education-empty" hidden></p>
+      </div>
+    </section>
+
+    <section class="section" id="learning" aria-labelledby="learning-h" hidden>
+      <h2 id="learning-h">Learning</h2>
+      <div class="section-body">
+        <div id="learning-list"></div>
+        <p class="empty" id="learning-empty" hidden></p>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <div class="section-body" id="skills-list"></div>
+    </section>
+
+    <noscript>
+      <p class="noscript">This resume needs JavaScript to load. You can also find me on
+        <a href="https://www.linkedin.com/in/jose-miguel-elizalde-moncayo/">LinkedIn</a>.</p>
+    </noscript>
+  </main>
 </body>
 </html>
