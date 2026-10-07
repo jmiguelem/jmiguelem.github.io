@@ -2,7 +2,7 @@
 (() => {
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const TOP_N = 12; // tags shown in the filter bar before "All tags"
-  const SECTIONS = ["work", "education", "learning"];
+  const SECTIONS = ["work", "personal", "education", "learning"];
 
   let TAGS = {};           // tag vocabulary from resume.json
   let MATCHABLE = new Set(); // tags at least one entry can match
@@ -106,6 +106,19 @@
     );
   }
 
+  function renderPersonal(p) {
+    const title = p.url ? h("a", { href: p.url, rel: "noopener" }, p.name) : p.name;
+    return h("article", { class: "entry", dataset: tagData(p.tags) },
+      h("div", { class: "entry-head" },
+        h("h3", {}, title),
+        p.start && h("span", { class: "dates" }, fmtMonth(p.start))
+      ),
+      p.summary && h("p", {}, p.summary),
+      bullets(p.bullets),
+      tagList(p.tags)
+    );
+  }
+
   function renderEducation(e) {
     return h("article", { class: "entry", dataset: tagData(e.tags) },
       entryHead("h3", [e.institution], e.start, e.end),
@@ -147,6 +160,9 @@
     addStructuredData(data);
 
     $("work-list").replaceChildren(...[...data.work].sort(byStartDesc).map(renderJob));
+    const personal = data.personalProjects || [];
+    $("personal").hidden = personal.length === 0;
+    $("personal-list").replaceChildren(...[...personal].sort(byStartDesc).map(renderPersonal));
     $("education-list").replaceChildren(...[...data.education].sort(byStartDesc).map(renderEducation));
     $("learning").hidden = data.learning.length === 0;
     $("learning-list").replaceChildren(...data.learning.map(renderLearning));
@@ -187,6 +203,7 @@
         wrap: el.querySelector(".projects"),
         projects: [...el.querySelectorAll(".project")].map((p) => ({ el: p, tags: tagsOf(p) })),
       })),
+      personal: simple("personal-list"),
       education: simple("education-list"),
       learning: simple("learning-list"),
     };
@@ -199,7 +216,7 @@
     const all = sel.size === 0;
     const ok = (tags) => all || matches(tags, sel);
     const show = new Map();
-    const perSection = { work: 0, education: 0, learning: 0 };
+    const perSection = { work: 0, personal: 0, education: 0, learning: 0 };
 
     for (const job of MODEL.work) {
       const hits = job.projects.map((p) => ok(p.tags));
@@ -210,14 +227,14 @@
       if (job.wrap) show.set(job.wrap, anyProject);
       if (visible) perSection.work += anyProject ? hits.filter(Boolean).length : 1;
     }
-    for (const key of ["education", "learning"]) {
+    for (const key of ["personal", "education", "learning"]) {
       for (const item of MODEL[key]) {
         const visible = ok(item.tags);
         show.set(item.el, visible);
         if (visible) perSection[key] += 1;
       }
     }
-    const total = perSection.work + perSection.education + perSection.learning;
+    const total = Object.values(perSection).reduce((a, b) => a + b, 0);
     return { show, perSection, total };
   }
 
@@ -333,7 +350,7 @@
 
     // Every tag that an entry uses, plus the parents it rolls up to.
     MATCHABLE = new Set();
-    const all = [...MODEL.work.flatMap((j) => [j, ...j.projects]), ...MODEL.education, ...MODEL.learning];
+    const all = [...MODEL.work.flatMap((j) => [j, ...j.projects]), ...MODEL.personal, ...MODEL.education, ...MODEL.learning];
     for (const item of all) for (const t of item.tags) ancestors(t).forEach((a) => MATCHABLE.add(a));
 
     TOTAL = evaluate(new Set()).total;

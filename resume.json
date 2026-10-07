@@ -49,6 +49,7 @@
     "Excel": { "group": "BI" },
 
     "Python": { "group": "Languages and frameworks" },
+    "pytest": { "group": "Languages and frameworks", "parent": "Python" },
     "TypeScript": { "group": "Languages and frameworks" },
     "NestJS": { "group": "Languages and frameworks", "parent": "TypeScript" },
     "JavaScript": { "group": "Languages and frameworks" },
@@ -57,8 +58,11 @@
     "PHP": { "group": "Languages and frameworks" },
 
     "Git": { "group": "Dev tools" },
-    "GitHub Copilot": { "group": "Dev tools" },
     "Jira": { "group": "Dev tools" },
+
+    "AI": { "group": "AI" },
+    "Claude": { "group": "AI", "parent": "AI" },
+    "GitHub Copilot": { "group": "AI", "parent": "AI" },
 
     "Salesforce": { "group": "Business tools" },
     "HubSpot": { "group": "Business tools" },
@@ -71,6 +75,7 @@
     "Machine Learning": { "group": "Topics" },
     "Advanced Analytics": { "group": "Topics" },
     "Backend": { "group": "Topics" },
+    "APIs": { "group": "Topics" },
     "Platform Engineering": { "group": "Topics" },
     "Solution Architecture": { "group": "Topics" },
     "Stakeholder Management": { "group": "Topics" }
@@ -85,7 +90,7 @@
       "tags": [],
       "projects": [
         {
-          "name": "Utility client — Weather Alert application",
+          "name": "Utility client — Weather Alert application (San Diego, CA)",
           "start": "2025-03",
           "end": null,
           "summary": "Map-based alerting app that ingests planned, unplanned and potential power outages every 5 minutes, runs calculations and raises alerts shown on the map.",
@@ -213,6 +218,22 @@
     }
   ],
 
+  "personalProjects": [
+    {
+      "name": "Sleeper API Analyzer",
+      "url": "https://github.com/jmiguelem/sleeper-api-analyzer",
+      "start": "2026-10",
+      "summary": "Fantasy football lineup optimizer that pulls rosters from the Sleeper API and matchup data from ESPN to pick the best weekly lineup and recommend player swaps.",
+      "bullets": [
+        "Scores players by blending projections (50%), opponent matchup strength from ESPN defense ranks (40%) and recent form (10%).",
+        "Builds lineups in four phases: lock fixed-position starters, fill FLEX slots across positions, fill the bench, then suggest swaps when the score gap passes a configurable threshold.",
+        "Caches API responses, supports per-league configuration and tier cutoffs, and outputs to the terminal or a Markdown report; covered by a pytest suite.",
+        "Built with Claude as an AI pair programmer."
+      ],
+      "tags": ["Python", "pytest", "APIs", "Advanced Analytics", "AI", "Claude"]
+    }
+  ],
+
   "education": [
     {
       "institution": "Tecnológico de Monterrey",
@@ -239,7 +260,8 @@
     "Data engineering": ["SQL", "DBT", "Spark", "Airflow", "Databricks", "Snowflake", "Terraform", "Docker"],
     "BI": ["Power BI", "Tableau", "Looker", "QuickSight"],
     "Languages and frameworks": ["Python", "TypeScript", "NestJS", "JavaScript", "R", "C++", "PHP"],
-    "Dev tools": ["Git", "GitHub Copilot", "Jira"],
+    "Dev tools": ["Git", "Jira"],
+    "AI": ["Claude", "GitHub Copilot"],
     "Business tools": ["Salesforce", "HubSpot"]
   }
 }
