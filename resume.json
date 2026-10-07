@@ -222,6 +222,8 @@
     {
       "name": "Sleeper API Analyzer",
       "url": "https://github.com/jmiguelem/sleeper-api-analyzer",
+      "repo": "jmiguelem/sleeper-api-analyzer",
+      "pushedAt": "2026-10-07T05:03:42Z",
       "start": "2026-10",
       "summary": "Fantasy football lineup optimizer that pulls rosters from the Sleeper API and matchup data from ESPN to pick the best weekly lineup and recommend player swaps.",
       "bullets": [
