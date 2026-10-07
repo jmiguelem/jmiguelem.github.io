@@ -6,9 +6,10 @@ Online resume of José Miguel Elizalde Moncayo, served by GitHub Pages at https:
 
 All content lives in `resume.json`. Edit that file only.
 
-- **work**: newest first is automatic (sorted by `start`). Client projects go in an employer's `projects` list.
+- **work**: newest first is automatic (sorted by `start`). An optional `url` (LinkedIn company page) links the company name. Client projects go in an employer's `projects` list.
 - **personalProjects**: side projects (`name`, `url`, `start`, `summary`, `bullets`, `tags`); only the start month is shown; the section stays hidden while the list is empty.
-- **education**, **learning** (courses and certifications): the Learning section stays hidden while its list is empty.
+- **education**: an optional `url` links the institution name.
+- **learning** (courses and certifications): the Learning section stays hidden while its list is empty.
 - **skills**: groups of tag names shown in the Skills section.
 - **tags**: the tag vocabulary. Every tag used anywhere must be defined here with a `group`; an optional `parent` makes it roll up (for example BigQuery has parent GCP, so filtering by GCP includes BigQuery entries).
 

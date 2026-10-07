@@ -84,6 +84,7 @@
   "work": [
     {
       "company": "Slalom",
+      "url": "https://www.linkedin.com/company/slalom-consulting/",
       "role": "Senior Data Engineer",
       "start": "2025-03",
       "end": null,
@@ -106,7 +107,8 @@
       ]
     },
     {
-      "company": "Danu Consulting Group",
+      "company": "Danu Analítica",
+      "url": "https://www.linkedin.com/company/danuanalitica",
       "role": "Data Engineer",
       "start": "2024-02",
       "end": "2025-08",
@@ -171,6 +173,7 @@
     },
     {
       "company": "Doctoralia",
+      "url": "https://www.linkedin.com/company/doctoraliamx/",
       "role": "Customer Success Operations",
       "start": "2023-02",
       "end": "2024-02",
@@ -183,6 +186,7 @@
     },
     {
       "company": "Cemex",
+      "url": "https://www.linkedin.com/company/cemex/",
       "role": "Data Analyst",
       "start": "2022-02",
       "end": "2022-12",
@@ -237,6 +241,7 @@
   "education": [
     {
       "institution": "Tecnológico de Monterrey",
+      "url": "https://tec.mx/",
       "degree": "Bachelor of Science in Computer Science",
       "detail": "Minor in Advanced Analytics",
       "start": "2017-08",
@@ -245,6 +250,7 @@
     },
     {
       "institution": "Chalmers University of Technology",
+      "url": "https://www.chalmers.se/en/",
       "degree": "Study abroad semester",
       "detail": "Machine Learning and Neural Networks courses",
       "start": "2021-08",

@@ -83,6 +83,8 @@
       h("span", { class: "dates" }, fmtRange(start, end))
     );
 
+  const linked = (text, url) => (url ? h("a", { href: url, rel: "noopener" }, text) : text);
+
   const tagData = (tags) => ({ tags: (tags || []).join("|") });
 
   function renderProject(p) {
@@ -97,7 +99,7 @@
   function renderJob(job) {
     const projects = [...(job.projects || [])].sort(byStartDesc);
     return h("article", { class: "entry", dataset: tagData(job.tags) },
-      entryHead("h3", [job.role, h("span", { class: "org" }, ` · ${job.company}`)], job.start, job.end),
+      entryHead("h3", [job.role, h("span", { class: "org" }, " · ", linked(job.company, job.url))], job.start, job.end),
       job.note && h("p", { class: "note" }, job.note),
       job.summary && h("p", {}, job.summary),
       bullets(job.bullets),
@@ -107,10 +109,9 @@
   }
 
   function renderPersonal(p) {
-    const title = p.url ? h("a", { href: p.url, rel: "noopener" }, p.name) : p.name;
     return h("article", { class: "entry", dataset: tagData(p.tags) },
       h("div", { class: "entry-head" },
-        h("h3", {}, title),
+        h("h3", {}, linked(p.name, p.url)),
         p.start && h("span", { class: "dates" }, fmtMonth(p.start))
       ),
       p.summary && h("p", {}, p.summary),
@@ -121,17 +122,16 @@
 
   function renderEducation(e) {
     return h("article", { class: "entry", dataset: tagData(e.tags) },
-      entryHead("h3", [e.institution], e.start, e.end),
+      entryHead("h3", [linked(e.institution, e.url)], e.start, e.end),
       h("p", {}, e.detail ? `${e.degree} · ${e.detail}` : e.degree),
       tagList(e.tags)
     );
   }
 
   function renderLearning(item) {
-    const title = item.url ? h("a", { href: item.url, rel: "noopener" }, item.name) : item.name;
     return h("article", { class: "entry", dataset: tagData(item.tags) },
       h("div", { class: "entry-head" },
-        h("h3", {}, title, item.issuer ? h("span", { class: "org" }, ` · ${item.issuer}`) : null),
+        h("h3", {}, linked(item.name, item.url), item.issuer ? h("span", { class: "org" }, ` · ${item.issuer}`) : null),
         item.date && h("span", { class: "dates" }, fmtMonth(item.date))
       ),
       item.summary && h("p", {}, item.summary),
