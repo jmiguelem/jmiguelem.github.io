@@ -244,6 +244,7 @@
     },
     {
       "name": "Training Dashboard",
+      "url": "https://github.com/jmiguelem/training-dashboard",
       "start": "2026-11",
       "summary": "Personal training dashboard that syncs Garmin and Whoop data and turns it into progress analysis, readiness scores and an AI-written weekly plan.",
       "bullets": [
