@@ -50,6 +50,11 @@
 
     "Python": { "group": "Languages and frameworks" },
     "pytest": { "group": "Languages and frameworks", "parent": "Python" },
+    "FastAPI": { "group": "Languages and frameworks", "parent": "Python" },
+    "SQLite": { "group": "Data engineering", "parent": "SQL" },
+    "React": { "group": "Languages and frameworks", "parent": "TypeScript" },
+    "Vite": { "group": "Languages and frameworks", "parent": "TypeScript" },
+    "Vitest": { "group": "Languages and frameworks", "parent": "TypeScript" },
     "TypeScript": { "group": "Languages and frameworks" },
     "NestJS": { "group": "Languages and frameworks", "parent": "TypeScript" },
     "JavaScript": { "group": "Languages and frameworks" },
@@ -59,6 +64,7 @@
 
     "Git": { "group": "Dev tools" },
     "Jira": { "group": "Dev tools" },
+    "GitHub Actions": { "group": "Dev tools" },
 
     "AI": { "group": "AI" },
     "Claude": { "group": "AI", "parent": "AI" },
@@ -235,6 +241,33 @@
         "Built with Claude as an AI pair programmer."
       ],
       "tags": ["Python", "pytest", "APIs", "Advanced Analytics", "AI", "Claude"]
+    },
+    {
+      "name": "Training Dashboard",
+      "start": "2026-11",
+      "summary": "Personal training dashboard that syncs Garmin and Whoop data and turns it into progress analysis, readiness scores and an AI-written weekly plan.",
+      "bullets": [
+        "Python and FastAPI backend with SQLite: syncs Garmin and Whoop (OAuth) on a weekly schedule with catch-up after downtime, and computes recovery, sport-specific and lift metrics.",
+        "AI coach built on the Claude API that reads the synced data and the user's goal profile and writes a structured weekly plan with sessions, intensity and rationale; sessions are auto-matched to completed activities.",
+        "React and TypeScript PWA with Recharts, covering home, activities, recovery, progress, lifts and coach pages; installable on a phone over a private Tailscale network.",
+        "Password-protected with signed HttpOnly session cookies and login lockout; backend covered by a pytest suite.",
+        "Built with Claude as an AI pair programmer."
+      ],
+      "tags": ["Python", "FastAPI", "SQLite", "pytest", "TypeScript", "React", "Vite", "APIs", "Advanced Analytics", "AI", "Claude"]
+    },
+    {
+      "name": "Spotify Genre Playlist Maker",
+      "url": "https://github.com/jmiguelem/spotify_api_playlist_maker",
+      "start": "2026-11",
+      "summary": "Browser app that imports a Spotify library and builds playlists grouped by genre, deployed as a static site on GitHub Pages.",
+      "bullets": [
+        "Authenticates with the Spotify Web API using OAuth PKCE entirely in the browser, with no backend.",
+        "Imports liked songs and artist genres into IndexedDB, then groups tracks into broad or specific genre candidates with a configurable minimum song count.",
+        "Refines genre tags with Last.fm, rate-limited to the API's request guidelines.",
+        "Written in TypeScript with Vite, covered by a Vitest suite and deployed through GitHub Actions.",
+        "Built with Claude as an AI pair programmer."
+      ],
+      "tags": ["TypeScript", "Vite", "Vitest", "APIs", "GitHub Actions", "AI", "Claude"]
     }
   ],
 
