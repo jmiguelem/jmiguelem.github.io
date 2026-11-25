@@ -312,11 +312,13 @@
 
   "skills": {
     "Cloud": ["AWS", "GCP", "Azure"],
-    "Data engineering": ["SQL", "DBT", "Spark", "Airflow", "Databricks", "Snowflake", "Terraform", "Docker"],
-    "BI": ["Power BI", "Tableau", "Looker", "QuickSight"],
-    "Languages and frameworks": ["Python", "TypeScript", "NestJS", "JavaScript", "R", "C++", "PHP"],
-    "Dev tools": ["Git", "Jira"],
-    "AI": ["Claude", "Codex", "GitHub Copilot"],
-    "Business tools": ["Salesforce", "HubSpot"]
+    "Data engineering": ["SQL", "DBT", "Spark", "Airflow", "Databricks", "Snowflake", "Terraform", "Docker", "PySpark", "SQL Server", "MySQL", "SQLite"],
+    "BI": ["Power BI", "Tableau", "Looker", "QuickSight", "Retool", "Excel"],
+    "Languages and frameworks": ["Python", "TypeScript", "NestJS", "JavaScript", "R", "C++", "PHP", "pytest", "FastAPI", "React", "Vite", "Vitest"],
+    "Dev tools": ["Git", "Jira", "GitHub Actions"],
+    "AI": ["Claude", "Codex", "GitHub Copilot", "AI"],
+    "Business tools": ["Salesforce", "HubSpot", "Shopify", "Google Sheets"],
+    "Cloud services": ["BigQuery", "Redshift", "S3", "Glue", "Lambda", "Step Functions", "EventBridge", "SES", "End User Messaging", "Pinpoint", "SageMaker", "Personalize", "Azure Data Lake"],
+    "Topics": ["ETL", "Data Warehousing", "Data Modeling", "Machine Learning", "Advanced Analytics", "Backend", "APIs", "Platform Engineering", "Solution Architecture", "Stakeholder Management"]
   }
 }
