@@ -111,7 +111,7 @@
   function renderPersonal(p) {
     return h("article", { class: "entry", dataset: tagData(p.tags) },
       h("div", { class: "entry-head" },
-        h("h3", {}, linked(p.name, p.url)),
+        h("h3", {}, linked(p.name, p.url), p.private ? h("span", { class: "lock", title: "Private repository", role: "img", "aria-label": "Private repository" }, " 🔒") : null),
         p.start && h("span", { class: "dates" }, fmtMonth(p.start))
       ),
       p.summary && h("p", {}, p.summary),

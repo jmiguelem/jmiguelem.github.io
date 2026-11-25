@@ -273,7 +273,7 @@
     },
     {
       "name": "Faro Finance",
-      "url": "https://github.com/jmiguelem/faro-finance",
+      "private": true,
       "start": "2026-11",
       "summary": "Private, mobile-friendly personal finance dashboard for Mexican bank and credit card accounts, reporting in pesos without connecting to the banks.",
       "bullets": [
