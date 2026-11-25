@@ -316,7 +316,7 @@
     "BI": ["Power BI", "Tableau", "Looker", "QuickSight"],
     "Languages and frameworks": ["Python", "TypeScript", "NestJS", "JavaScript", "R", "C++", "PHP"],
     "Dev tools": ["Git", "Jira"],
-    "AI": ["Claude", "GitHub Copilot"],
+    "AI": ["Claude", "Codex", "GitHub Copilot"],
     "Business tools": ["Salesforce", "HubSpot"]
   }
 }
