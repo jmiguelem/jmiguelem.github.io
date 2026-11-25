@@ -269,6 +269,19 @@
         "Built with Claude as an AI pair programmer."
       ],
       "tags": ["TypeScript", "Vite", "Vitest", "APIs", "GitHub Actions", "AI", "Claude"]
+    },
+    {
+      "name": "Faro Finance",
+      "url": "https://github.com/jmiguelem/faro-finance",
+      "start": "2026-11",
+      "summary": "Private, mobile-friendly personal finance dashboard for Mexican bank and credit card accounts, reporting in pesos without connecting to the banks.",
+      "bullets": [
+        "Parses BBVA and Nu statement PDFs in the browser with pdf.js, with a review step to confirm dates, balances and transactions before saving, so raw files never reach the server.",
+        "Categorizes transactions with a rule catalog and avoids double-counting: card payments and transfers are excluded from spending, and billed installments replace the original financed purchase when it can be matched.",
+        "Monthly checkup that plans around card payment deadlines and paydays and compares savings against a down payment or an emergency fund, flagging incomplete imports instead of estimating from partial data.",
+        "JavaScript Worker API backed by SQLite (D1) with authenticated access; covered by a Node test suite."
+      ],
+      "tags": ["JavaScript", "SQLite", "APIs", "ETL", "Advanced Analytics", "Backend"]
     }
   ],
 
